@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dgcv1-23370": {
+      "hosting": {
+        "app": [
+          "dgcv1-23370"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dgcv1-23370"
+  }
+}
