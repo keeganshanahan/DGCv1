@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Davis Global Center Request Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input placeholder="Name">
+  </ion-input>
+  <ion-input placeholder="Phone Number">
+  </ion-input>
+  <ion-input placeholder="Address">
+    </ion-input>
+
+</ion-content>
+<ion-content>
+  What kinçd of event are you scheduling?
+  <ion-input placeholder="Name of Event">
+
+  </ion-input>
+  <ion-card>
+    <ion-list>
+      <ion-item *ngFor="let entry of form">
+        <ion-checkbox></ion-checkbox>
+        <ion-label>{{entry.val}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+    <ion-content>
+      <ion-title>
+        Additional Information:
+      </ion-title>
+      <ion-input placeholder="Number of Participents">
+        
+      </ion-input>
+    </ion-content>
+
+
+
+</ion-content>
