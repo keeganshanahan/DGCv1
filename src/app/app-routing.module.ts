@@ -30,6 +30,14 @@ const routes: Routes = [
     path: 'intake-form',
     loadChildren: () => import('./intake-form/intake-form.module').then( m => m.IntakeFormPageModule)
   },
+  {
+    path: 'month',
+    loadChildren: () => import('./month/month.module').then( m => m.MonthPageModule)
+  },
+  {
+    path: 'day',
+    loadChildren: () => import('./day/day.module').then( m => m.DayPageModule)
+  },
 
 ];
 
