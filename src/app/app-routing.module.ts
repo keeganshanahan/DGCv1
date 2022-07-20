@@ -10,7 +10,27 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'faculty-login',
+    loadChildren: () => import('./faculty-login/faculty-login.module').then( m => m.FacultyLoginPageModule)
   },
+  {
+    path: 'user-login',
+    loadChildren: () => import('./user-login/user-login.module').then( m => m.UserLoginPageModule)
+  },
+  {
+    path: 'calendar',
+    loadChildren: () => import('./calendar/calendar.module').then( m => m.CalendarPageModule)
+  },
+  {
+    path: 'week',
+    loadChildren: () => import('./week/week.module').then( m => m.WeekPageModule)
+  },
+  {
+    path: 'intake-form',
+    loadChildren: () => import('./intake-form/intake-form.module').then( m => m.IntakeFormPageModule)
+  },
+
 ];
 
 @NgModule({
