@@ -11,5 +11,4 @@ export class WeekPage implements OnInit {
 
   ngOnInit() {
   }
-
 }
