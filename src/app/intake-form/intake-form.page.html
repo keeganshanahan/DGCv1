@@ -2,6 +2,7 @@
   <ion-toolbar>
     <ion-title>Davis Global Center Request Form</ion-title>
   </ion-toolbar>
+  <ion-button (click)="cancel()">Go Back</ion-button>
 </ion-header>
 
 <ion-content>
@@ -12,9 +13,7 @@
   <ion-input placeholder="Address">
     </ion-input>
 
-</ion-content>
-<ion-content>
-  What kinçd of event are you scheduling?
+  What kind of event are you scheduling?
   <ion-input placeholder="Name of Event">
 
   </ion-input>
@@ -39,3 +38,7 @@
 
 
 </ion-content>
+
+<ion-button (click)="submit()">
+  Submit
+</ion-button>

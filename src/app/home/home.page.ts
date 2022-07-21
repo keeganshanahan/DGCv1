@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { format } from 'path';
+
+
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +12,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor( private route: Router) {}
+  intakeForm() {
+    this.route.navigate(['/intake-form']);
+  }
+  login() {
+    this.route.navigate(['/user-login']);
+  }
 
 }
