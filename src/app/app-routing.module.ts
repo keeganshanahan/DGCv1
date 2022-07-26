@@ -47,6 +47,14 @@ const routes: Routes = [
     path: 'day',
     loadChildren: () => import('./day/day.module').then( m => m.DayPageModule)
   },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'password-reset',
+    loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
+  },
 
 ];
 

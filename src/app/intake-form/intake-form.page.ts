@@ -34,6 +34,9 @@ submit() {
   cancel() {
     this.route.navigate(['/home']);
   }
+  calendar() {
+    this.route.navigate(['/calendar'])
+  }
   
 
 
