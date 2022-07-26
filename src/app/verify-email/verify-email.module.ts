@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CalendarPageRoutingModule } from './calendar-routing.module';
+import { VerifyEmailPageRoutingModule } from './verify-email-routing.module';
 
-import { CalendarPage } from './calendar.page';
-
+import { VerifyEmailPage } from './verify-email.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CalendarPageRoutingModule
+    VerifyEmailPageRoutingModule
   ],
-  declarations: [CalendarPage]
+  declarations: [VerifyEmailPage]
 })
-export class CalendarPageModule {}
-
+export class VerifyEmailPageModule {}

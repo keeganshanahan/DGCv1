@@ -10,7 +10,8 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'faculty-login',
     loadChildren: () => import('./faculty-login/faculty-login.module').then( m => m.FacultyLoginPageModule)
   },
@@ -37,6 +38,14 @@ const routes: Routes = [
   {
     path: 'verify-email',
     loadChildren: () => import('./verify-email/verify-email.module').then( m => m.VerifyEmailPageModule)
+  },
+  {
+    path: 'month',
+    loadChildren: () => import('./month/month.module').then( m => m.MonthPageModule)
+  },
+  {
+    path: 'day',
+    loadChildren: () => import('./day/day.module').then( m => m.DayPageModule)
   },
 
 ];

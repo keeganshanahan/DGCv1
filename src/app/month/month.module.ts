@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CalendarPageRoutingModule } from './calendar-routing.module';
+import { MonthPageRoutingModule } from './month-routing.module';
 
-import { CalendarPage } from './calendar.page';
-
+import { MonthPage } from './month.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CalendarPageRoutingModule
+    MonthPageRoutingModule
   ],
-  declarations: [CalendarPage]
+  declarations: [MonthPage]
 })
-export class CalendarPageModule {}
-
+export class MonthPageModule {}
