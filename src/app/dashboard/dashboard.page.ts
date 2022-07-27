@@ -41,7 +41,7 @@ export class DashboardPage implements OnInit {
       })
   }
   addPreset() {
-    
+    this.router.navigate(["/intake-form"])
   }
   goToIntake(){
     this.navController.navigateRoot('/intake-form')

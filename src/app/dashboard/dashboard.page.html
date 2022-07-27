@@ -41,7 +41,9 @@
          <ion-card>
 
               <ion-title> Presets </ion-title>
-              <ion-icon name="add-circle-outline" (click)="addPreset"></ion-icon>
+              <ion-button (click)="addPreset()">
+              <ion-icon name="add-circle-outline"></ion-icon>
+              </ion-button>
          </ion-card>
       </ion-header>
       <ion-button type="submit" color="primary" expand="block" (click)="goToIntake()">Intake Form</ion-button>
