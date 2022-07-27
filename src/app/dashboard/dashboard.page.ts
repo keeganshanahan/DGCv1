@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { IonicAuthService } from '../ionic-auth.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -36,5 +37,8 @@ export class DashboardPage implements OnInit {
       .catch(error => {
         console.log(error);
       })
+  }
+  addPreset() {
+    
   }
 }
