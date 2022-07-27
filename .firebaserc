@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "intake-data": {
+      "hosting": {
+        "app": [
+          "intake-data"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "intake-data"
+  }
+}
