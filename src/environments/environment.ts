@@ -14,7 +14,9 @@ export const environment = {
   production: true
   
 };
-const firebaseConfig = {
+export const environmentAuth = {
+  production: false,
+  firebaseConfigAuth: {
   apiKey: "AIzaSyDZU_3izCnSNFdkdbNopZJPuWvIXv_xbGU",
   authDomain: "login1-0-38c30.firebaseapp.com",
   projectId: "login1-0-38c30",
@@ -22,6 +24,7 @@ const firebaseConfig = {
   messagingSenderId: "622812349221",
   appId: "1:622812349221:web:486f94206f291e21f990cc",
   measurementId: "G-M9SQ4ZRWRE"
+  }
 };
 
 
