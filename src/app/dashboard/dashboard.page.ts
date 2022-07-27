@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { IonicAuthService } from '../ionic-auth.service';
 import { MenuController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +15,8 @@ export class DashboardPage implements OnInit {
 
   constructor(
     private router: Router,
-    private ionicAuthService: IonicAuthService
+    private ionicAuthService: IonicAuthService,
+    private navController: NavController
   ) { }
 
   ngOnInit() {
@@ -40,5 +42,8 @@ export class DashboardPage implements OnInit {
   }
   addPreset() {
     
+  }
+  goToIntake(){
+    this.navController.navigateRoot('/intake-form')
   }
 }
