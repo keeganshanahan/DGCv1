@@ -37,6 +37,10 @@ submit() {
   calendar() {
     this.route.navigate(['/calendar'])
   }
+
+  save() {
+    this.route.navigate(['/dashboard'])
+  }
   
 
 

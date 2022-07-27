@@ -26,7 +26,7 @@
     </ion-list>
   </ion-card>
 
-    <ion-content>
+    
       <ion-title>
         Additional Information:
       </ion-title>
@@ -34,13 +34,50 @@
         
       </ion-input>
       <ion-button (click)="calendar()">Choose A Date</ion-button>
+
+        <p>Have you previously discussed your visit with iEXCEL staff?</p>
+        <section class="example-section">
+      <ionic-checkbox class="example-margin">Yes</ionic-checkbox>
+      <ionic-checkbox class="example-margin">No</ionic-checkbox>
+    </section>
+
+      <ion-input>If yes, who did you discuss with? Enter names here: </ion-input>
+      
+      <p>Is this a recurring visit?</p>
+      <section class="example-section">
+        <ionic-checkbox class="example-margin">Yes</ionic-checkbox>
+        <ionic-checkbox class="example-margin">No</ionic-checkbox>
+      </section>
+
+      
+      <ion-input>If yes, enter other requested dates here: </ion-input>
+
+      
+      <ion-input>Enter other schedulers here (if applicable): </ion-input>
+
+      
+      <ion-input>Enter any questions here: </ion-input>
+
+      
+      <ion-input>List materials you plan on bringing here: </ion-input>
+
+      
+      <ion-input>List needed materials here: </ion-input>
+
+      
+      <ion-input>List accessibility needs here: </ion-input>
+
+      <p>Attach relevant documents here: </p>
+
     </ion-content>
 
 
+  
 
 
-</ion-content>
 
+<ion-button (click)="save()">Save</ion-button>
 <ion-button (click)="submit()">
   Submit
 </ion-button>
+
