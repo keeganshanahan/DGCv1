@@ -1,4 +1,4 @@
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable, InjectionToken, NgZone } from '@angular/core';
 import * as auth from 'firebase/auth';
 import { User } from './auth';
 import { Router } from '@angular/router';
@@ -7,16 +7,18 @@ import {
   AngularFirestore,
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
+
+
 @Injectable({
   providedIn: 'root',
 })
 export class AuthenticationService {
   userData: any;
   constructor(
-    public afStore: AngularFirestore,
-    public ngFireAuth: AngularFireAuth,
-    public router: Router,
-    public ngZone: NgZone
+    private afStore: AngularFirestore,
+    private ngFireAuth: AngularFireAuth,
+    private router: Router,
+    private ngZone: NgZone
   ) {
     this.ngFireAuth.authState.subscribe((user) => {
       if (user) {
@@ -34,7 +36,8 @@ export class AuthenticationService {
     return this.ngFireAuth.signInWithEmailAndPassword(email, password);
   }
   // Register user with email/password
-  RegisterUser(email, password) {
+  public RegisterUser(email, password) {
+    console.log("here")
     return this.ngFireAuth.createUserWithEmailAndPassword(email, password);
   }
   // Email verification when new user register
