@@ -1,9 +1,37 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>calendar</ion-title>
+    <ion-title>Calendar</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-tabs>
+  
+  <ion-tab tab="week" component="app-week">
+    <ion-nav></ion-nav>
+  </ion-tab>
+  <ion-tab tab="month" component="app-month">
+    <ion-nav></ion-nav>
+  </ion-tab>
+  <ion-tab tab="day" component="app-day">
+    <ion-nav></ion-nav>
+  </ion-tab>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="month">
+      <ion-label>Month</ion-label>
+    </ion-tab-button>
 
-</ion-content>
+    <ion-tab-button tab="week">
+      <ion-label>Week</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="day">
+      <ion-label>Day</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+  <ion-route url="/week" component="app-week"></ion-route>
+  <ion-route url="/month" component="app-week"></ion-route>
+  <ion-route url="/day" component="app-week"></ion-route>
+
+</ion-tabs>
+

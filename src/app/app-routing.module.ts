@@ -10,7 +10,8 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'faculty-login',
     loadChildren: () => import('./faculty-login/faculty-login.module').then( m => m.FacultyLoginPageModule)
   },
@@ -29,6 +30,30 @@ const routes: Routes = [
   {
     path: 'intake-form',
     loadChildren: () => import('./intake-form/intake-form.module').then( m => m.IntakeFormPageModule)
+  },
+  {
+    path: 'registration',
+    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
+  },
+  {
+    path: 'verify-email',
+    loadChildren: () => import('./verify-email/verify-email.module').then( m => m.VerifyEmailPageModule)
+  },
+  {
+    path: 'month',
+    loadChildren: () => import('./month/month.module').then( m => m.MonthPageModule)
+  },
+  {
+    path: 'day',
+    loadChildren: () => import('./day/day.module').then( m => m.DayPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'password-reset',
+    loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
   },
 
 ];

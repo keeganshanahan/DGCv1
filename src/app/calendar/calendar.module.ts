@@ -8,6 +8,7 @@ import { CalendarPageRoutingModule } from './calendar-routing.module';
 
 import { CalendarPage } from './calendar.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,3 +19,4 @@ import { CalendarPage } from './calendar.page';
   declarations: [CalendarPage]
 })
 export class CalendarPageModule {}
+

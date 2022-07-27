@@ -1,14 +1,14 @@
 {
   "targets": {
-    "dgcv1-23370": {
+    "intake-data": {
       "hosting": {
         "app": [
-          "dgcv1-23370"
+          "intake-data"
         ]
       }
     }
   },
   "projects": {
-    "default": "dgcv1-23370"
+    "default": "intake-data"
   }
 }
