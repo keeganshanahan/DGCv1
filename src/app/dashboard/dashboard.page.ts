@@ -19,7 +19,7 @@ export class DashboardPage implements OnInit {
     private ionicAuthService: IonicAuthService,
     private navController: NavController,
     private storage: AngularFireStorage,
-    private db: AngularFirestore
+    private firestore: AngularFirestore
   ) { }
 
   ngOnInit() {
