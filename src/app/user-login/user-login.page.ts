@@ -76,5 +76,8 @@ export class UserLoginPage implements OnInit {
   goToSignup() {
     this.router.navigateByUrl('registration');
   }
+  goToPasswordReset() {
+    this.router.navigateByUrl('password-reset');
+  }
 
 }
