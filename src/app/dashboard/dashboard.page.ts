@@ -11,8 +11,10 @@ import { AngularFirestore } from '@angular/fire/compat/firestore'
   styleUrls: ['./dashboard.page.scss'],
 })
 
+
 export class DashboardPage implements OnInit {
   userDetail: string;
+  db: any;
 
   constructor(
     private router: Router,
