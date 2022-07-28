@@ -10,15 +10,7 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
   styleUrls: ['./intake-form.page.scss'],
 })
 export class IntakeFormPage {
-   public form = [
-      { val: '  Visualization Training/Event ( Augmented, Mixed or Virtual Reality Based)', isChecked: true },
-      { val: '  Clinical Simulation Training/Event (Task Trainer & Manikin Based)', isChecked: true },
-      { val: '  Human Simulation Training/Event ( SP, Standardized Patient Based)', isChecked: true },
-      { val: '  Surgical Simulation Training/Event (Fresh tissue, Simulators)', isChecked: true },
-      { val: '  Educational Research', isChecked: true },
-      { val: '  Tour or Demo', isChecked: true },
-      { val: '  Other', isChecked: true }
-    ];
+  
   inputValName: string = ""
   inputValNumber: string = ""
   inputValAddress: string = ""
@@ -30,6 +22,9 @@ export class IntakeFormPage {
  inputVal5: boolean=true
  inputVal6: boolean=true
  inputVal7: boolean=true
+ inputValPreviousDiscussion: boolean=true
+ inputValDiscussion: string = ""
+ inputValRecurringVisit: boolean=true
   
 
  constructor(private route: Router, private storage: AngularFireStorage, private db: AngularFirestore) {}
@@ -43,7 +38,7 @@ export class IntakeFormPage {
     .doc()
     .set({ Name: this.inputValName, 
       Number: this.inputValNumber, 
-      Address: this.inputValAddress, 
+      EmailAddress: this.inputValAddress, 
       Title: this.inputValTitle,
       Visualization: this.inputVal1,
       ClinicalSimulation: this.inputVal2,
@@ -51,7 +46,10 @@ export class IntakeFormPage {
       SurgicalSimulation: this.inputVal4,
       EducationalResearch: this.inputVal5,
       TourOrDemo: this.inputVal6,
-      Other: this.inputVal7
+      Other: this.inputVal7,
+      PreviousDiscussion: this.inputValPreviousDiscussion,
+      WhoDidTheyDiscussWith: this.inputValDiscussion,
+      ReccuringVisit: this.inputValRecurringVisit 
   }).catch(err => {
       console.log(err)
     })
