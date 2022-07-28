@@ -32,7 +32,7 @@ submit() {
 }
 
 
-  constructor(private route: Router) {}
+  constructor(private route: Router, private storage: AngularFireStorage, private firestore: AngularFirestore) {}
   cancel() {
     this.route.navigate(['/home']);
   }
