@@ -6,23 +6,47 @@
 </ion-header>
 
 <ion-content>
-  <ion-input placeholder="Name">
+  <ion-input placeholder="Name" [(ngModel)]="inputValName">
   </ion-input>
-  <ion-input placeholder="Phone Number">
+  <ion-input placeholder="Phone Number" [(ngModel)]="inputValNumber">
   </ion-input>
-  <ion-input placeholder="Address">
+  <ion-input placeholder="Email Address" [(ngModel)]="inputValAddress">
     </ion-input>
 
   What kind of event are you scheduling?
-  <ion-input placeholder="Name of Event">
+  <ion-input placeholder="Name of Event" [(ngModel)]="inputValTitle">
 
   </ion-input>
   <ion-card>
-    <ion-list>
-      <ion-item *ngFor="let entry of form">
-        <ion-checkbox></ion-checkbox>
-        <ion-label>{{entry.val}}</ion-label>
+    <ion-list >
+      <ion-item>
+        <ion-checkbox [(ngModel)]="inputVal1"></ion-checkbox>
+        <ion-label>Visualization Training/Event ( Augmented, Mixed or Virtual Reality Based)</ion-label>
       </ion-item>
+      <ion-item>
+        <ion-checkbox [(ngModel)]="inputVal2"></ion-checkbox>
+      <ion-label> Clinical Simulation Training/Event (Task Trainer & Manikin Based</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox [(ngModel)]="inputVal3"></ion-checkbox>
+    <ion-label>Human Simulation Training/Event ( SP, Standardized Patient Based)</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox [(ngModel)]="inputVal4"></ion-checkbox>
+  <ion-label>Surgical Simulation Training/Event (Fresh tissue, Simulators)</ion-label>
+</ion-item>
+<ion-item>
+  <ion-checkbox [(ngModel)]="inputVal5"></ion-checkbox>
+<ion-label>Educational Research</ion-label>
+</ion-item>
+<ion-item>
+  <ion-checkbox [(ngModel)]="inputVal6"></ion-checkbox>
+<ion-label>Tour or Demo</ion-label>
+</ion-item>
+<ion-item>
+  <ion-checkbox [(ngModel)]="inputVal7"></ion-checkbox>
+<ion-label>Other</ion-label>
+</ion-item>
     </ion-list>
   </ion-card>
 
@@ -39,7 +63,7 @@
     <section class="example-section">
       <div>
         <ion-item>
-          <ion-checkbox></ion-checkbox>
+          <ion-checkbox [ngModel]="inputValPreviousDiscussion"></ion-checkbox>
           <ion-label>Yes</ion-label>
         </ion-item>
         <ion-item>
@@ -50,14 +74,14 @@
     </section>
 
       <ion-input>If yes, who did you discuss with?:
-        <ion-input placeholder="Names"></ion-input>
+        <ion-input placeholder="Names" [(ngModel)]="inputValDiscussion"></ion-input>
          </ion-input>
       
       <p>Is this a recurring visit?</p>
       <section class="example-section">
         <div>
           <ion-item>
-            <ion-checkbox></ion-checkbox>
+            <ion-checkbox [(ngModel)]="inputValRecurringVisit"></ion-checkbox>
             <ion-label>Yes</ion-label>
           </ion-item>
           <ion-item>

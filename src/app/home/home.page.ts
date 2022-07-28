@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { format } from 'path';
+import { Appointment } from '../shared/Appointment';
+import { AppointmentService } from './../shared/appointment.service';
 
 
 
@@ -11,13 +13,41 @@ import { format } from 'path';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  Bookings = [];
 
-  constructor( private route: Router) {}
+  constructor( 
+    private route: Router,
+    private aptService: AppointmentService
+    ) {}
   intakeForm() {
     this.route.navigate(['/intake-form']);
   }
   login() {
     this.route.navigate(['/user-login']);
   }
-
+  ngOnInit() {
+    this.fetchBookings();
+    let bookingRes = this.aptService.getBookingList();
+    bookingRes.snapshotChanges().subscribe(res => {
+      this.Bookings = [];
+      res.forEach(item => {
+        let a = item.payload.toJSON();
+        a['$key'] = item.key;
+        this.Bookings.push(a as Appointment);
+      })
+    })
+  }
+  fetchBookings() {
+    this.aptService.getBookingList().valueChanges().subscribe(res => {
+      console.log(res)
+    })
+  }
+  deleteBooking(id) {
+    console.log(id)
+    if (window.confirm('Do you really want to delete?')) {
+      this.aptService.deleteBooking(id)
+    }
+  }
 }
+
+
