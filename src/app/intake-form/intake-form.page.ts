@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Route, Router } from '@angular/router';
 import { format } from 'path';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 @Component({
   selector: 'app-intake-form',
@@ -31,9 +32,9 @@ export class IntakeFormPage {
  inputVal7: boolean=true
   
 
+ constructor(private route: Router, private storage: AngularFireStorage, private db: AngularFirestore) {}
 
 
-  constructor(private route: Router, public db: AngularFirestore) {}
 
   submit() {
     // window.location.reload()

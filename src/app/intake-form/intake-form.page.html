@@ -50,20 +50,77 @@
     </ion-list>
   </ion-card>
 
-    <ion-content>
+    
       <ion-title>
-        Additional Information:
+      Additional Information:
       </ion-title>
-      <ion-input placeholder="Number of Participents">
+      <ion-input placeholder="Number of Participants">
         
       </ion-input>
       <ion-button (click)="calendar()">Choose A Date</ion-button>
+
+        <p class = "inputText">Have you previously discussed your visit with iEXCEL staff?</p>
+    <section class="example-section">
+      <div>
+        <ion-item>
+          <ion-checkbox></ion-checkbox>
+          <ion-label>Yes</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox></ion-checkbox>
+          <ion-label>No</ion-label>
+        </ion-item>
+      </div>
+    </section>
+
+      <ion-input>If yes, who did you discuss with?:
+        <ion-input placeholder="Names"></ion-input>
+         </ion-input>
+      
+      <p class="inputText">Is this a recurring visit?</p>
+      <section class="example-section">
+        <div>
+          <ion-item>
+            <ion-checkbox></ion-checkbox>
+            <ion-label>Yes</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-checkbox></ion-checkbox>
+            <ion-label>No</ion-label>
+          </ion-item>
+        </div>
+      </section>
+
+      
+      <ion-input>If yes, enter other requested dates here: 
+        <ion-input placeholder="Dates"></ion-input>
+      </ion-input>
+
+      
+      <ion-input>Enter other schedulers here (if applicable): 
+        <ion-input placeholder="Names"></ion-input>
+      </ion-input>
+
+      
+      <ion-input>Enter any questions here: </ion-input>
+
+      
+      <ion-input>List materials you plan on bringing here: </ion-input>
+
+      
+      <ion-input>List needed materials here: </ion-input>
+
+      
+      <ion-input>List accessibility needs here: </ion-input>
+
+      <p>Attach relevant documents here: </p>
+
     </ion-content>
 
 
+  
 
 
-</ion-content>
 
 <ion-button (click)="save()">Save</ion-button>
 <ion-button (click)="submit()">
