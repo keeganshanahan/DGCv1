@@ -18,7 +18,7 @@ import { AuthenticationService,  } from './shared/authentication-service';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environmentAuth.firebaseConfigAuth), AngularFireAuthModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), provideFirestore(() => getFirestore())],
+  imports: [BrowserModule, AngularFirestoreModule, AngularFireStorageModule, AngularFireDatabaseModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environmentAuth.firebaseConfigAuth), AngularFireAuthModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), provideFirestore(() => getFirestore())],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, ],
   bootstrap: [AppComponent],
 
@@ -31,7 +31,7 @@ import { AuthenticationService,  } from './shared/authentication-service';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirebaseApp(() => initializeApp(environmentAuth.firebaseConfigAuth)),
     provideFirestore(() => getFirestore())
   ],
   providers: [

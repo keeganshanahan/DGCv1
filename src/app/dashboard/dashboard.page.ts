@@ -3,7 +3,8 @@ import { Router } from "@angular/router";
 import { IonicAuthService } from '../ionic-auth.service';
 import { MenuController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
-
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { AngularFirestore } from '@angular/fire/compat/firestore'
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
@@ -16,7 +17,9 @@ export class DashboardPage implements OnInit {
   constructor(
     private router: Router,
     private ionicAuthService: IonicAuthService,
-    private navController: NavController
+    private navController: NavController,
+    private storage: AngularFireStorage,
+    private firestore: AngularFirestore
   ) { }
 
   ngOnInit() {
