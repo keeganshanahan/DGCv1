@@ -15,17 +15,24 @@ export class IntakeFormPage {
   inputValNumber: string = ""
   inputValAddress: string = ""
   inputValTitle: string = ""
-  inputVal1: boolean = true;
- inputVal2: boolean=true
- inputVal3: boolean=true
- inputVal4: boolean=true
- inputVal5: boolean=true
- inputVal6: boolean=true
- inputVal7: boolean=true
- inputValPreviousDiscussion: boolean=true
+  inputVal1: boolean = false
+ inputVal2: boolean=false
+ inputVal3: boolean=false
+ inputVal4: boolean=false
+ inputVal5: boolean=false
+ inputVal6: boolean=false
+ inputVal7: boolean=false
+ inputValNumberofParticipants: string = ""
+ inputValPreviousDiscussion: boolean=false
  inputValDiscussion: string = ""
- inputValRecurringVisit: boolean=true
-  
+ inputValRecurringVisit: boolean=false
+  inputValRecurringDate: string = ""
+  inputValOtherSchedulers: string = ""
+  inputValQuestions: string = ""
+  inputValPlannedMaterials: string = ""
+  inputValNeededMaterials: string = ""
+  inputValAccessibility: string = ""
+
 
  constructor(private route: Router, private storage: AngularFireStorage, private db: AngularFirestore) {}
 
@@ -49,7 +56,17 @@ export class IntakeFormPage {
       Other: this.inputVal7,
       PreviousDiscussion: this.inputValPreviousDiscussion,
       WhoDidTheyDiscussWith: this.inputValDiscussion,
-      ReccuringVisit: this.inputValRecurringVisit 
+      ReccuringVisit: this.inputValRecurringVisit,
+      NumberOfParticipants: this.inputValNumberofParticipants,
+      RecurringDate: this.inputValRecurringDate,
+      OtherSchedulers: this.inputValOtherSchedulers,
+      Questions: this.inputValQuestions,
+      BroughtMaterials: this.inputValPlannedMaterials,
+      NeededMaterials: this.inputValNeededMaterials,
+      AccessibilityNeeds: this.inputValAccessibility,
+      
+
+
   }).catch(err => {
       console.log(err)
     })
