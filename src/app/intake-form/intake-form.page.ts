@@ -32,6 +32,7 @@ export class IntakeFormPage {
   inputValPlannedMaterials: string = ""
   inputValNeededMaterials: string = ""
   inputValAccessibility: string = ""
+  inputValCost: string = ""
 
 
  constructor(private route: Router, private storage: AngularFireStorage, private db: AngularFirestore) {}
@@ -64,6 +65,7 @@ export class IntakeFormPage {
       BroughtMaterials: this.inputValPlannedMaterials,
       NeededMaterials: this.inputValNeededMaterials,
       AccessibilityNeeds: this.inputValAccessibility,
+      CostCenter: this.inputValCost
       
 
 
