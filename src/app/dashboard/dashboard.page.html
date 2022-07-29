@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Dashboard</ion-title>
+      
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
+  
+  
+  <ion-content class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col text-center>
+          Welcome User!
+  
+          <p>User email : <strong>{{ userDetail }}</strong></p>
+        </ion-col>
+      </ion-row>
+
+      <ion-header>
+         <ion-card>
+
+              <ion-title> Presets </ion-title>
+              <ion-button (click)="addPreset()">
+              <ion-icon name="add-circle-outline"></ion-icon>
+              </ion-button>
+         </ion-card>
+      </ion-header>
+      <ion-button type="submit" color="primary" expand="block" (click)="goToIntakeCopy()">Schedule a Visit</ion-button>
+      <ion-button type="submit" color="danger" expand="block" (click)="signOut()">Signout</ion-button>
+    </ion-grid>
+  </ion-content>
