@@ -6,24 +6,49 @@
 </ion-header>
 
 <ion-content>
-  <p></p>
+  <ion-card>
+    <ion-card-subtitle>
+        <ion-text color = "dark">
+      <p></p>
   RESERVATIONS: iExcel requires' six weeks notice to allow for planning and compliance to unviersity policies: <ion-text color = "primary">https://wiki.unmc.edu/index.php/Policies_and_Guidelines</ion-text>  
   <p></p>
   CONFIRMATION: Will be sent via email within three business days. Due to the large volume of requests there may be unforeseen delays in this process.
   <p></p>
   For questions or concerns contact: iexcel@unmc.edu or call 402-559-2442.
   <p></p>
+  </ion-text>
+   </ion-card-subtitle>
+  </ion-card>
+  <p></p>
+
+  <p style = "margin: 25px">
+   Your Name <ion-text color = "danger">*</ion-text>
   <ion-input placeholder="Name">
   </ion-input>
+  </p>
+
+  <p style = "margin: 25px">
+   Phone Number <ion-text color = "danger">*</ion-text>
   <ion-input placeholder="Phone Number">
   </ion-input>
+  </p>
+
+  <p style = "margin: 25px">
+   Email Address <ion-text color = "danger">*</ion-text>
   <ion-input placeholder="Address">
     </ion-input>
+  </p>
 
+  <p style = "margin: 25px">
   What kind of event are you scheduling?
   <ion-input placeholder="Name of Event">
-
   </ion-input>
+  </p>
+
+  <p style = "margin: 25px">
+    Please select the option that best fits your event <ion-text color = "danger">*</ion-text>
+    </p>
+
   <ion-card>
     <ion-list>
       <ion-item *ngFor="let entry of form">
