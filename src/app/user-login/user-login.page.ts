@@ -1,37 +1,80 @@
 import { Component, OnInit } from '@angular/core';
-import {NavController} from '@ionic/angular';
 import { Router } from "@angular/router";
-import{ AuthenticationService } from '../shared/authentication-service';
+import { IonicAuthService } from '../ionic-auth.service';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.page.html',
   styleUrls: ['./user-login.page.scss'],
 })
+
 export class UserLoginPage implements OnInit {
 
-  constructor(public navCtrl: NavController,
-    public authService: AuthenticationService,
-    public router: Router) {}
-  home() {
-    this.navCtrl.navigateForward(['/home']);
-  }
+  userForm: FormGroup;
+  successMsg: string = '';
+  errorMsg: string = '';
+  
+
+  error_msg = {
+    'email': [
+      { 
+        type: 'required', 
+        message: 'Provide email.' 
+      },
+      { 
+        type: 'pattern', 
+        message: 'Email is not valid.' 
+      }
+    ],
+    'password': [
+      { 
+        type: 'required', 
+        message: 'Password is required.' 
+      },
+      { 
+        type: 'minlength', 
+        message: 'Password length should be 6 characters long.' 
+      }
+    ]
+  };
+
+  constructor(
+    private router: Router,
+    private ionicAuthService: IonicAuthService,
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit() {
+    this.userForm = this.fb.group({
+      email: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+      ])),
+      password: new FormControl('', Validators.compose([
+        Validators.minLength(6),
+        Validators.required
+      ])),
+    });
   }
-  logIn(email, password) {
-    this.authService.SignIn(email.value, password.value)
-      .then((res) => {
-        if(this.authService.isEmailVerified) {
-          this.router.navigate(['dashboard']);          
-        } else {
-          window.alert('Email is not verified')
-          return false;
-        }
-      }).catch((error) => {
-        window.alert(error.message)
+
+  signIn(value) {
+    this.ionicAuthService.signinUser(value)
+      .then((response) => {
+        console.log(response)
+        this.errorMsg = "";
+        this.router.navigateByUrl('dashboard');
+      }, error => {
+        this.errorMsg = error.message;
+        this.successMsg = "";
       })
   }
-  createAccount() {
-    this.router.navigate(['/registration'])
+  goHome() {
+    this.router.navigate(['/home'])
   }
+
+  goToSignup() {
+    this.router.navigateByUrl('registration');
+  }
+
 }
