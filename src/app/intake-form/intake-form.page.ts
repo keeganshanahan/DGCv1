@@ -14,6 +14,7 @@ export class IntakeFormPage {
   inputValName: string = ""
   inputValNumber: string = ""
   inputValAddress: string = ""
+  inputValGradYear: string = ""
   inputValTitle: string = ""
   inputVal1: boolean = false
  inputVal2: boolean=false
