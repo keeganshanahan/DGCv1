@@ -27,10 +27,7 @@ const routes: Routes = [
     path: 'week',
     loadChildren: () => import('./week/week.module').then( m => m.WeekPageModule)
   },
-  {
-   path: 'make-appointment',
-  loadChildren: () => import('./make-appointment/make-appointment.module').then (m => m.MakeAppointmentPageModule)
-  },
+  
   {
     path: 'intake-form',
     loadChildren: () => import('./intake-form/intake-form.module').then( m => m.IntakeFormPageModule)
@@ -59,18 +56,7 @@ const routes: Routes = [
     path: 'password-reset',
     loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
   },
-  {
-    path: 'make-appointment',
-    loadChildren: () => import('./make-appointment/make-appointment.module').then( m => m.MakeAppointmentPageModule)
-  },
-  {
-    path: 'edit-appointment/:id',
-    loadChildren: () => import('./edit-appointment/edit-appointment.module').then( m => m.EditAppointmentPageModule)
-  },
-  {
-    path: 'edit-appointment',
-    loadChildren: () => import('./edit-appointment/edit-appointment.module').then( m => m.EditAppointmentPageModule)
-  },
+
 
 ];
 
