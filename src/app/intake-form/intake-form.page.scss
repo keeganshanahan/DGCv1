@@ -1,11 +1,9 @@
 
 
 ion-content ion-list{
-    background-color: red;
+    background-color: #AD122A;
 }
-intake-form{
-    color:lightpink;
-}
+
 ion-input{
     border-bottom-style: groove;
     border-top-style: groove;
@@ -21,4 +19,11 @@ ion-input{
     border-left-color: gray;
 
 }
-
+ion-header{
+    background-color:#AD122A
+    
+}
+ion-button{
+    background-color: #AD122A;
+    color: white;
+}
