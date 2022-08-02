@@ -32,8 +32,6 @@ export class IntakeFormPage {
   inputValPlannedMaterials: string = ""
   inputValNeededMaterials: string = ""
   inputValAccessibility: string = ""
-  inputValCost: string = ""
-
 
 
  constructor(private route: Router, private storage: AngularFireStorage, private db: AngularFirestore) {}
@@ -66,7 +64,6 @@ export class IntakeFormPage {
       BroughtMaterials: this.inputValPlannedMaterials,
       NeededMaterials: this.inputValNeededMaterials,
       AccessibilityNeeds: this.inputValAccessibility,
-      CostCenter: this.inputValCost
       
 
 
@@ -76,7 +73,7 @@ export class IntakeFormPage {
   
   }
   cancel() {
-    this.route.navigate(['/home']);
+    this.route.navigate(['/dashboard']);
   }
   calendar() {
     this.route.navigate(['/calendar'])

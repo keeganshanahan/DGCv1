@@ -1,3 +1,24 @@
-.inputText{
-    color: white;
+
+
+ion-content ion-list{
+    background-color: red;
 }
+intake-form{
+    color:lightpink;
+}
+ion-input{
+    border-bottom-style: groove;
+    border-top-style: groove;
+    border-right-style: groove;
+    border-left-style: groove;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-color: gray;
+    border-top-color: gray;
+    border-right-color: gray;
+    border-left-color: gray;
+
+}
+
