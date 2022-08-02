@@ -72,8 +72,8 @@ const routes: Routes = [
     loadChildren: () => import('./edit-appointment/edit-appointment.module').then( m => m.EditAppointmentPageModule)
   },
   {
-    path: 'intake-form copy',
-    loadChildren: () => import('./intake-form copy/intake-form.module').then( m => m.IntakeFormPageModule)
+    path: 'intake-form-copy',
+    loadChildren: () => import('./intake-form-copy/intake-form.module').then( m => m.IntakeFormPageModule)
   },
 {
   path: 'Preset-Intake-Form',
