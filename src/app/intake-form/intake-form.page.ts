@@ -15,6 +15,8 @@ export class IntakeFormPage {
   inputValName: string = ""
   inputValNumber: string = ""
   inputValAddress: string = ""
+  inputValGradYear: string = ""
+  inputValAffiliation: string = ""
   inputValTitle: string = ""
   inputVal1: boolean = false
  inputVal2: boolean=false
@@ -34,6 +36,7 @@ export class IntakeFormPage {
   inputValNeededMaterials: string = ""
   inputValAccessibility: string = ""
   inputValCost: string = ""
+
 
 
  constructor(private route: Router, private storage: AngularFireStorage, private db: AngularFirestore) {}
