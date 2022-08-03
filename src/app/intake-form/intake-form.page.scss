@@ -19,15 +19,42 @@ ion-input{
     border-left-color: gray;
 
 }
-ion-header{
-    background-color:#AD122A
-    
-}
-ion-button{
-    background-color: #AD122A;
-    color: white;
-}
 
 .name{
-    background-color: #DCDDDF
+    background-color: #DCDDDF;
+    width: 600px;
+    text-align: center;
+    margin:auto
+}
+.phoneNumberInput{
+    background-color: #DCDDDF;
+    width: 600px;
+    text-align: center;
+    margin:auto
+
+}
+.emailAddressInput{
+    background-color: #DCDDDF;
+    width: 600px;
+    text-align: center;
+    margin:auto
+
+}
+.eventTypeQuestion{
+    font-size: x-large;
+    
+}
+.personalInformationHeader{
+    font-size: x-large;
+}
+.eventName{
+    background-color: #DCDDDF;
+    width: 600px;
+    text-align: center;
+    margin:auto
+
+}
+.personalInputs{
+    justify-content: center;
+    align-items: center;
 }
