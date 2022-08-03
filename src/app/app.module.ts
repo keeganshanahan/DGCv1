@@ -14,7 +14,6 @@ import { environmentAuth } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AuthenticationService,  } from './shared/authentication-service';
-import { IonicStepperModule } from 'ionic-stepper'
 
 @NgModule({
   declarations: [AppComponent],
