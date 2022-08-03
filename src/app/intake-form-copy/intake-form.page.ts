@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Route, Router } from '@angular/router';
 import { format } from 'path';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { UserServiceService } from '../user-service.service';
 
 @Component({
   selector: 'app-intake-form',
@@ -32,6 +33,7 @@ export class IntakeFormPage {
   inputValPlannedMaterials: string = ""
   inputValNeededMaterials: string = ""
   inputValAccessibility: string = ""
+  userID: string = ""
 
 
  constructor(private route: Router, private storage: AngularFireStorage, private db: AngularFirestore) {}
@@ -63,7 +65,7 @@ export class IntakeFormPage {
       Questions: this.inputValQuestions,
       BroughtMaterials: this.inputValPlannedMaterials,
       NeededMaterials: this.inputValNeededMaterials,
-      AccessibilityNeeds: this.inputValAccessibility,
+      AccessibilityNeeds: this.inputValAccessibility
       
 
 

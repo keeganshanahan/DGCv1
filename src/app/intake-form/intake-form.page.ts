@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Route, Router } from '@angular/router';
 import { format } from 'path';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { UserServiceService } from '../user-service.service';
 
 @Component({
   selector: 'app-intake-form',
