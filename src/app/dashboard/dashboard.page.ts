@@ -49,6 +49,6 @@ export class DashboardPage implements OnInit {
     this.router.navigate(["/Preset-Intake-Form"])
   }
   goToIntakeCopy(){
-    this.navController.navigateRoot('/intake-form copy')
+    this.navController.navigateRoot('/intake-form-copy')
   }
 }

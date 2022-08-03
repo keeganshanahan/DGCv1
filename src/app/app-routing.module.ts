@@ -27,10 +27,7 @@ const routes: Routes = [
     path: 'week',
     loadChildren: () => import('./week/week.module').then( m => m.WeekPageModule)
   },
-  {
-   path: 'make-appointment',
-  loadChildren: () => import('./make-appointment/make-appointment.module').then (m => m.MakeAppointmentPageModule)
-  },
+  
   {
     path: 'intake-form',
     loadChildren: () => import('./intake-form/intake-form.module').then( m => m.IntakeFormPageModule)
