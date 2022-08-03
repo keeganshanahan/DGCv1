@@ -4,6 +4,7 @@ import { Route, Router } from '@angular/router';
 import { format } from 'path';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { UserServiceService } from '../user-service.service';
+import { getAdditionalUserInfo } from 'firebase/auth';
 
 @Component({
   selector: 'app-intake-form',
@@ -36,14 +37,17 @@ export class IntakeFormPage {
   userID: string = ""
 
 
- constructor(private route: Router, private storage: AngularFireStorage, private db: AngularFirestore) {}
+ constructor(private route: Router, private storage: AngularFireStorage, private db: AngularFirestore, private userService: UserServiceService) {}
 
 
 
-  submit() {
+  async submit() {
     // window.location.reload()
     const collectionRef = this.db.collection('Info')
-    collectionRef
+    var uid = await this.userService.getUser().then(uid => {
+
+
+      collectionRef
     .doc()
     .set({ Name: this.inputValName, 
       Number: this.inputValNumber, 
@@ -65,13 +69,17 @@ export class IntakeFormPage {
       Questions: this.inputValQuestions,
       BroughtMaterials: this.inputValPlannedMaterials,
       NeededMaterials: this.inputValNeededMaterials,
-      AccessibilityNeeds: this.inputValAccessibility
+      AccessibilityNeeds: this.inputValAccessibility,
+      userID: uid
       
 
 
   }).catch(err => {
       console.log(err)
     })
+    })
+    
+    
   
   }
   cancel() {

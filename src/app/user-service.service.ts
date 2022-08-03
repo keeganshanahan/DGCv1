@@ -16,6 +16,7 @@ export class UserServiceService {
   async getUser(){
     var user = await this.angularFireAuth.currentUser;
     var uid = user.uid
+    return uid;
   }
 }
 
