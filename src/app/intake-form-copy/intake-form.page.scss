@@ -1,3 +1,74 @@
-.inputText{
-    color: white;
+
+
+ion-content ion-list{
+    background-color: #AD122A;
+}
+
+ion-input{
+    border-bottom-style: groove;
+    border-top-style: groove;
+    border-right-style: groove;
+    border-left-style: groove;
+    border-bottom-width: 2px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-left-width: 2px;
+    border-bottom-color: gray;
+    border-top-color: gray;
+    border-right-color: gray;
+    border-left-color: gray;
+
+}
+
+.name{
+    background-color: #DCDDDF;
+    width: 600px;
+    text-align: center;
+    margin:auto
+}
+.phoneNumberInput{
+    background-color: #DCDDDF;
+    width: 600px;
+    text-align: center;
+    margin:auto
+
+}
+.emailAddressInput{
+    background-color: #DCDDDF;
+    width: 600px;
+    text-align: center;
+    margin:auto
+
+}
+.eventTypeQuestion{
+    font-size: x-large;
+    
+}
+.personalInformationHeader{
+    font-size: x-large;
+}
+.eventName{
+    background-color: #DCDDDF;
+    width: 600px;
+    text-align: center;
+    margin:auto
+
+}
+.personalInputs{
+    justify-content: center;
+    align-items: center;
+}
+
+.affiliationFormat{
+    background-color: #DCDDDF;
+    width: 600px;
+    text-align: center;
+    margin:auto
+}
+
+.graduationFormat{
+    background-color:#DCDDDF;
+    width: 600px;
+    text-align: center;
+    margin:auto
 }

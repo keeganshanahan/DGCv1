@@ -1,136 +1,147 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Davis Global Center Request Form</ion-title>
+    <ion-title class="requestTitle">Davis Global Center Request Form</ion-title>
   </ion-toolbar>
-  <ion-button (click)="cancel()">Go Back</ion-button>
+  <ion-button class="goBack" (click)="cancel()">Go Back</ion-button>
 </ion-header>
 
 <ion-content>
-  <ion-input placeholder="Name" [(ngModel)]="inputValName">
-  </ion-input>
-  <ion-input placeholder="Phone Number" [(ngModel)]="inputValNumber">
-  </ion-input>
-  <ion-input placeholder="Email Address" [(ngModel)]="inputValAddress">
+  <ion-text class="personalInformationHeader">
+    Personal Information
+  </ion-text>
+  <div class="personalInputs">
+    <ion-input class="name" placeholder="Name" [(ngModel)]="inputValName">
     </ion-input>
+    <ion-input class="phoneNumberInput" placeholder="Phone Number" [(ngModel)]="inputValNumber">
+    </ion-input>
+    <ion-input class="emailAddressInput" placeholder="Email Address" [(ngModel)]="inputValAddress">
+   </ion-input>
 
-  What kind of event are you scheduling?
-  <ion-input placeholder="Name of Event" [(ngModel)]="inputValTitle">
+      <ion-input class="affiliationFormat" placeholder="Affiliation (including department)" [(ngModel)]="inputValAffiliation">
+      </ion-input>
 
-  </ion-input>
+      <ion-input class="graduationFormat" placeholder="Graduation Year" [(ngModel)]="inputValGradYear">
+      </ion-input>
+    
+      <ion-input class="eventName" placeholder="Name of Event" [(ngModel)]="inputValTitle">
+      </ion-input>
+  </div>
+  <ion-text class="eventTypeQuestion">
+    Event Information
+  </ion-text>
   <ion-card>
-    <ion-list >
+    <ion-list>
       <ion-item>
         <ion-checkbox [(ngModel)]="inputVal1"></ion-checkbox>
         <ion-label>Visualization Training/Event ( Augmented, Mixed or Virtual Reality Based)</ion-label>
       </ion-item>
       <ion-item>
         <ion-checkbox [(ngModel)]="inputVal2"></ion-checkbox>
-      <ion-label> Clinical Simulation Training/Event (Task Trainer & Manikin Based</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-checkbox [(ngModel)]="inputVal3"></ion-checkbox>
-    <ion-label>Human Simulation Training/Event ( SP, Standardized Patient Based)</ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-checkbox [(ngModel)]="inputVal4"></ion-checkbox>
-  <ion-label>Surgical Simulation Training/Event (Fresh tissue, Simulators)</ion-label>
-</ion-item>
-<ion-item>
-  <ion-checkbox [(ngModel)]="inputVal5"></ion-checkbox>
-<ion-label>Educational Research</ion-label>
-</ion-item>
-<ion-item>
-  <ion-checkbox [(ngModel)]="inputVal6"></ion-checkbox>
-<ion-label>Tour or Demo</ion-label>
-</ion-item>
-<ion-item>
-  <ion-checkbox [(ngModel)]="inputVal7"></ion-checkbox>
-<ion-label>Other</ion-label>
-</ion-item>
+        <ion-label> Clinical Simulation Training/Event (Task Trainer & Manikin Based</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox [(ngModel)]="inputVal3"></ion-checkbox>
+        <ion-label>Human Simulation Training/Event ( SP, Standardized Patient Based)</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox [(ngModel)]="inputVal4"></ion-checkbox>
+        <ion-label>Surgical Simulation Training/Event (Fresh tissue, Simulators)</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox [(ngModel)]="inputVal5"></ion-checkbox>
+        <ion-label>Educational Research</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox [(ngModel)]="inputVal6"></ion-checkbox>
+        <ion-label>Tour or Demo</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox [(ngModel)]="inputVal7"></ion-checkbox>
+        <ion-label>Other</ion-label>
+      </ion-item>
     </ion-list>
   </ion-card>
 
-    
-      <ion-title>
-      Additional Information:
-      </ion-title>
-      <ion-input placeholder="Number of Participants" [(ngModel)] = "inputValNumberofParticipants">
-        
-      </ion-input>
-      <ion-button (click)="calendar()">Choose A Date</ion-button>
 
-        <p>Have you previously discussed your visit with iEXCEL staff?</p>
-    <section class="example-section">
-      <div>
-        <ion-item>
-          <ion-checkbox [ngModel]="inputValPreviousDiscussion"></ion-checkbox>
-          <ion-label>Yes</ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-checkbox [ngModel]="inputValPreviousDiscussion"></ion-checkbox>
-          <ion-label>No</ion-label>
-        </ion-item>
-      </div>
-    </section>
+  <ion-title>
+    Additional Information:
+  </ion-title>
+  <ion-input placeholder="Number of Participants" [(ngModel)]="inputValNumberofParticipants">
 
-      <ion-input>If yes, who did you discuss with?:
-        <ion-input placeholder="Names" [(ngModel)]="inputValDiscussion"></ion-input>
-         </ion-input>
-      
-      <p>Is this a recurring visit?</p>
-      <section class="example-section">
-        <div>
-          <ion-item>
-            <ion-checkbox [(ngModel)]="inputValRecurringVisit"></ion-checkbox>
-            <ion-label>Yes</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-checkbox [(ngModel)]="inputValRecurringVisit"></ion-checkbox>
-            <ion-label>No</ion-label>
-          </ion-item>
-        </div>
-      </section>
+  </ion-input>
+  <ion-button (click)="calendar()">Choose A Date</ion-button>
 
-      
-      <ion-input>If yes, enter other requested dates here: 
-        <ion-input placeholder="Dates" [(ngModel)] = "inputValRecurringDate"></ion-input>
-      </ion-input>
-      <br>
+  <p>Have you previously discussed your visit with iEXCEL staff?</p>
+  <section class="example-section">
+    <div>
+      <ion-item>
+        <ion-checkbox [ngModel]="inputValPreviousDiscussion"></ion-checkbox>
+        <ion-label>Yes</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox [ngModel]="inputValPreviousDiscussion"></ion-checkbox>
+        <ion-label>No</ion-label>
+      </ion-item>
+    </div>
+  </section>
 
-      
-      <ion-input>Enter other schedulers here (if applicable): 
-        <ion-input placeholder="Names" [(ngModel)] = "inputValOtherSchedulers"></ion-input>
-      </ion-input>
-      <br>
+  <ion-input>If yes, who did you discuss with?:
+    <ion-input placeholder="Names" [(ngModel)]="inputValDiscussion"></ion-input>
+  </ion-input>
 
-      
-      <ion-input [(ngModel)] = "inputValQuestions">Enter any questions here: </ion-input>
-      <br>
-
-      
-      <ion-input [(ngModel)] = "inputValPlannedMaterials">List materials you plan on bringing here: </ion-input>
-      <br>
-
-      
-      <ion-input [(ngModel)] = "inputValNeededMaterials">List needed materials here: </ion-input>
-      <br>
-
-      
-      <ion-input [(ngModel)] = "inputValAccessibility">List accessibility needs here: </ion-input>
-      <br>
-
-      <ion-input>Attach relevant documents here: </ion-input>
-      <br>
-
-    </ion-content>
+  <p>Is this a recurring visit?</p>
+  <section class="example-section">
+    <div>
+      <ion-item>
+        <ion-checkbox [(ngModel)]="inputValRecurringVisit"></ion-checkbox>
+        <ion-label>Yes</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox [(ngModel)]="inputValRecurringVisit"></ion-checkbox>
+        <ion-label>No</ion-label>
+      </ion-item>
+    </div>
+  </section>
 
 
-  
+  <ion-input>If yes, enter other requested dates here:
+    <ion-input placeholder="Dates" [(ngModel)]="inputValRecurringDate"></ion-input>
+  </ion-input>
+  <br>
+
+
+  <ion-input>Enter other facilitators here (if applicable):
+    <ion-input placeholder="Names" [(ngModel)]="inputValOtherSchedulers"></ion-input>
+  </ion-input>
+  <br>
+
+
+  <ion-input [(ngModel)]="inputValQuestions">Enter any questions here: </ion-input>
+  <br>
+
+
+  <ion-input [(ngModel)]="inputValPlannedMaterials">List materials you plan on bringing here: </ion-input>
+  <br>
+
+
+  <ion-input [(ngModel)]="inputValNeededMaterials">List needed technology here: </ion-input>
+  <br>
+
+
+  <ion-input [(ngModel)]="inputValAccessibility">List accessibility needs here: </ion-input>
+  <br>
+
+  <ion-input>Attach relevant documents here: </ion-input>
+  <br>
+
+  <ion-input [(ngModel)]="inputValCost">Name of Cost Center:</ion-input>
+  <ion-label> ^This is a required field, this does NOT mean you will be charged</ion-label>
+
+</ion-content>
+
+
+
 
 
 
 <ion-button (click)="save()">Save</ion-button>
-<ion-button (click)="submit()">
-  Submit
-</ion-button>
-
