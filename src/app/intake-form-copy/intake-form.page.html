@@ -144,4 +144,8 @@
 
 
 
-<ion-button (click)="save()">Save</ion-button>
+<ion-button [routerLink] (click)="[save(), '/dashboard']">Save</ion-button>
+
+<ion-button [routerLink] (click)="[submit(), '/dashboard']">
+  Submit
+</ion-button>
